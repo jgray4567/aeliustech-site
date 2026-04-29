@@ -1,0 +1,662 @@
+<html lang="en"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Connect - AELIUS Exploitation Technologies</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    
+    <link rel="canonical" href="https://aeliustech.com/connect">
+      
+  </head>
+  <body id="home-body">
+    
+
+
+
+  
+    <title>Header</title>
+    
+    <link href="../sass/main.min.36c12509526e3350765bade6eb3091e39fa0ad0a3111c28d61d4e18739cf548d.css" rel="stylesheet">
+  
+  
+    
+    <header>
+      <div class="header">
+        <div class="container">
+          <div class="header-inner">
+            <div class="logo-wrapper">
+              <a href="../index.html">
+                <img src="../images/logo.gif" alt="header logo">
+              </a>
+            </div>
+            <span class="navbar-icon block" id="toggle-nav"><span></span></span>
+            <nav class="navbar">
+              <div class="navbar-brand">
+                <a href="../index.html">
+                  <img src="../images/logo.gif" alt="header logo">
+                </a>
+              </div>
+              <div class="navbar-links">
+                <ul>
+                  
+                  <li class="list-item">
+                    <a href="../focus-and-specialties/index.html"><img src="../images/focus-icon.png" alt="Focus and Specialties" class="mobile-menu-image">
+                      Focus and Specialties
+                    </a>
+                  </li>
+                  
+                  <li class="list-item">
+                    <a href="../join-our-team/index.html"><img src="../images/team-icon.png" alt="Join Our Team" class="mobile-menu-image">
+                      Join Our Team
+                    </a>
+                  </li>
+                  
+                  <li class="list-item">
+                    <a href="index.html"><img src="../images/connect-icon.png" alt="Connect" class="mobile-menu-image">
+                      Connect
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </nav>
+            <nav class="site-navbar">
+              <ul>
+                
+                <li class="list-item" id="nav-main-0">
+                  <a href="../focus-and-specialties/index.html" class="image">
+                    <img src="../images/focus-icon.png" alt="Focus and Specialties">
+                    Focus and Specialties
+                  </a>
+                </li>
+                
+                <li class="list-item" id="nav-main-1">
+                  <a href="../join-our-team/index.html" class="image">
+                    <img src="../images/team-icon.png" alt="Join Our Team">
+                    Join Our Team
+                  </a>
+                </li>
+                
+                <li class="list-item" id="nav-main-2">
+                  <a href="index.html" class="image">
+                    <img src="../images/connect-icon.png" alt="Connect">
+                    Connect
+                  </a>
+                </li>
+                
+              </ul>
+            </nav>
+            
+          </div>
+        </div>
+      </div>
+    </header>
+  
+
+
+
+
+<script>
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbarToggle = document.querySelectorAll(".navbar-icon");
+    const headerLinks = document.querySelectorAll(".header-inner");
+
+    
+    function closePopups() {
+      headerLinks.forEach((serviceSection) => {
+        serviceSection.classList.remove("active");
+      });
+    }
+
+    navbarToggle.forEach((toggle, index) => {
+      toggle.addEventListener("click", function (event) {
+        event.stopPropagation(); 
+
+        
+        headerLinks[index].classList.toggle("active");
+      });
+    });
+
+    
+    document.addEventListener("click", function (event) {
+      const clickInsideToggle = Array.from(navbarToggle).some((toggle) =>
+        toggle.contains(event.target)
+      );
+
+      if (!clickInsideToggle) {
+        closePopups();
+      }
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const listItems = document.querySelectorAll(".list-item");
+
+    
+    function getCurrentURL() {
+      const currentURL = window.location.pathname;
+      return currentURL.endsWith("/") ? currentURL.slice(0, -1) : currentURL;
+    }
+
+    
+    function isLinkActive(link, currentURL) {
+      const linkURL = link.getAttribute("href");
+      return currentURL === linkURL;
+    }
+
+    
+    function setActiveImage() {
+      const currentURL = getCurrentURL();
+      listItems.forEach((item) => {
+        const link = item.querySelector("a");
+        const isActive = isLinkActive(link, currentURL);
+        const image = item.querySelector("img");
+        if (isActive) {
+          image?.classList.add("active-nav");
+        } else {
+          image?.classList.remove("active-nav");
+        }
+      });
+    }
+
+    
+    setActiveImage();
+  });
+</script>
+    
+    
+    
+
+  
+      
+  
+
+
+    
+  
+      
+  
+
+ 
+  
+    <div class="focus-special">
+        
+    </div>
+  
+
+
+
+<script src="../../cdn.jsdelivr.net/npm/js-cookie%403.0.1/dist/js.cookie.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const circleItems = document.querySelectorAll(".circle-items-list");
+    const h6Elements = document.querySelectorAll(".circle-hover h6");
+    const circleMiddle = document.querySelector(".focus-inner");
+    const middleOverlay = circleMiddle.querySelector(".middle-overlay");
+    const bigcircleMiddle = document.querySelector(".around-circle-group-section");
+    const bigmiddleOverlay = bigcircleMiddle.querySelector(".middle-overlay");
+    
+    h6Elements.forEach(function (h6Element) {
+      h6Element.addEventListener("mouseenter", function () {
+        const allHovered = Array.from(h6Elements).every((element) =>
+          element.classList.contains("circle-title-hover")
+        );
+
+        if (allHovered) {
+          middleOverlay.textContent = "&"; 
+          bigmiddleOverlay.textContent = "&"; 
+          Cookies.set("allCirclesHovered", true, { expires: 1 }); 
+        }
+      });
+    });
+
+    
+    if (Cookies.get("allCirclesHovered")) {
+      middleOverlay.textContent = "&";
+      bigmiddleOverlay.textContent = "&"; 
+    }
+
+    circleItems.forEach(function (circleItem, index) {
+      let hoverTimeout;
+
+      circleItem.addEventListener("mouseenter", function () {
+        if (!circleItem.classList.contains("focus-active")) {
+          circleItem.classList.add("focus-active");
+          hoverTimeout = setTimeout(function () {
+            circleItem.classList.remove("focus-active");
+          }, 5000);
+        }
+      });
+
+      circleItem.addEventListener("mouseleave", function () {
+        clearTimeout(hoverTimeout);
+        hoverTimeout = setTimeout(function () {
+          circleItem.classList.remove("focus-active");
+          circleItem.classList.add("has-visited");
+        }, 5000);
+      });
+
+      const h6Element = circleItem.querySelector(".circle-hover h6");
+      const cookieName = "circleHovered_" + index;
+
+      circleItem.addEventListener("mouseenter", function () {
+        if (!Cookies.get(cookieName)) {
+          h6Element.classList.add("circle-title-hover"); 
+          Cookies.set(cookieName, true, { expires: 1 }); 
+        }
+      });
+
+      
+      const cookieValue = Cookies.get(cookieName);
+      if (cookieValue) {
+        h6Element.classList.add("circle-title-hover");
+      }
+    });
+  });
+</script>
+ 
+  
+      
+  
+
+ 
+  
+      
+  
+
+ 
+  
+     
+   
+    <div class="connect-bg" id="container">
+      <div class="connect-section">
+          <div class="container">
+            <div class="connect-inner">
+              <div class="connect-left">
+                <h1 class="section-title">Connect</h1>
+                <h3 class="connect-sub-title">Want to know more? Our team is standing by.</h3>
+              </div>
+              <div class="connect-right">
+                <div class="connect-right-main">
+                  <div>
+                  <div>
+                      <div>
+                        <div class="form-main-error" id="message-error" style="color: #8b0000; display: none;">
+                        <h2 class="top-error">  There was a problem with your submission. Please review the fields below.</h2>
+                        </div>
+                      </div>
+                </div>
+                  <div class="connect-form-details">
+                    <form name="contact" id="mG61Hd" novalidate="">
+                      <div class="form-details-top">
+                        <div class="form-details-top-row">
+                          <div class="form-name">
+                            <input name="entry.2005620554" type="text" id="name" required="" placeholder="Name" class="name-icon">
+                            <div id="name-error" class="name-error">
+                              This field is required. Please complete the
+                              following fields: Name.
+                            </div>
+                           
+                          </div>
+                          <div class="form-email">
+                            <input name="entry.1227000568" type="email" id="email" required="" placeholder="Email" class="email-icon">
+                            <div id="email-error" class="email-error">
+                              This field is required.
+                            </div>
+                            <div id="wrong-email" class="email-error" style="display: none;">
+                              The email address entered is invalid, please check the formatting (e.g. email@domain.com).
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-details-bottom-row">
+                          <textarea name="entry.839337160" class="message-fill" id="comments" rows="4" placeholder="Tell us what you're thinking..."></textarea>
+                        </div>
+                      </div>
+                      <div class="form-details-bottom  popupTrigger ">
+                      <button type="submit" class="send-btn" value="Submit" id="send-msg">
+                          Send Message
+                        </button>
+                 
+                      </div>
+                    </form>
+                    <div class="loader">
+                      <svg viewBox="0 0 50 50" id="spinner">
+                        <circle class="path" cx="25" cy="25" r="5" fill="none" stroke-width="2"></circle>
+                      </svg> 
+                    </div>
+                  </div>
+                  
+                  <div class="connect-contact-details">
+                    <ul class="contact-details-list">
+                       
+                      <li>
+                        <div class="contact-icon">
+                          <img src="../images/mail.png" alt="">
+                        </div>
+
+                        
+                        
+                      <a href="mailto:info@aeliustech.com">info@aeliustech.com</a>
+                      
+                        
+                        
+                      <a href="mailto:media@aeliustech.com">media@aeliustech.com</a>
+                      
+                        
+                      </li>
+                       
+                      <li>
+                        <div class="contact-icon">
+                          <img src="../images/map.png" alt="">
+                        </div>
+
+                        
+                        
+                        <p>8150 Leesburg Pike, Ste. 810, Vienna, VA 22182</p>
+                      
+                        
+                      </li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        
+        <div class="popup-overlay service-popup hide thank-you-section ">
+          <div class="popup container" id="popup-main">
+            <div class="close-popup thank-you-close ">
+              
+              <img src="../images/close-icon.png" alt="" class="popup-close-btn thank-you-close-icon">
+            </div>
+            <div class="thank-you-image">
+              <img src="../images/thankyou-contact.png" alt="" class="popup-images">
+            </div>
+            <div class="thank-you-message">
+              <p>Thank you for connecting with AELIUS. A member of our team has received your message.</p>
+            </div>
+          </div>
+          </div>
+      </div>
+     
+  
+
+
+
+<script>
+  const popupToggle = document.querySelectorAll(".popupTrigger");
+const serviceSections = document.querySelectorAll(".connect-bg");
+const popupOverlay = document.querySelector(".popup-overlay");
+const connect_bg = document.getElementById("container");
+const popupOverlays = document.getElementById("home-body");
+const spinner = document.getElementById("spinner");
+
+function openPopup() {
+  popupOverlays.classList.add("open-thankyou-popup");
+  popupOverlay.style.display = "flex";
+  popupOverlay.classList.remove("hide");
+}
+
+function clearFormFields() {
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("comments");
+
+  
+  nameInput.value = "";
+  emailInput.value = "";
+  messageInput.value = "";
+
+  
+  const nameErrorDiv = document.getElementById("name-error");
+  const emailErrorDiv = document.getElementById("email-error");
+  const messageErrorDiv = document.getElementById("message-error");
+  
+  nameErrorDiv.style.display = "none";
+  emailErrorDiv.style.display = "none";
+  messageErrorDiv.style.display = "none";
+
+  
+  nameInput.classList.remove("active-border");
+  emailInput.classList.remove("active-border");
+  connect_bg.classList.remove("image-error");
+}
+
+popupToggle.forEach((toggle, index) => {
+  toggle.addEventListener("click", function (event) {
+    event.stopPropagation();
+  });
+});
+
+function closePopup() {
+  popupOverlays.classList.remove("open-thankyou-popup");
+  
+  popupOverlay.classList.add("hide");
+  serviceSections.forEach((serviceSection) => {
+    serviceSection.classList.remove("body");
+  });
+}
+
+popupOverlays.addEventListener("click", function (event) {
+  if (!event.target.closest(".popup")) {
+    closePopup();
+  }
+});
+popupOverlays.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closePopup();
+  }
+});
+
+
+const popupCloseBtns = document.querySelectorAll(".popup-close-btn");
+popupCloseBtns.forEach((closeBtn) => {
+  closeBtn.addEventListener("click", closePopup);
+});
+
+const submitButton = document.getElementById("submit-button");
+function validateEmail(email) {
+  
+  const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+
+  return emailRegex.test(email);
+}
+function openPopupOnSuccess(event) {
+  event.preventDefault(); 
+  const isValid = validateForm();
+
+  if (isValid) {
+    openPopup();
+    clearFormFields();
+    return true; 
+  } else {
+    return false; 
+  }
+}
+
+function validateForm() {
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const nameErrorDiv = document.getElementById("name-error");
+  const emailErrorDiv = document.getElementById("email-error");
+  const wrongEmail = document.getElementById("wrong-email");
+  const messageErrorDiv = document.getElementById("message-error");
+
+  let isValid = true;
+
+  if (nameInput.value === "") {
+    nameErrorDiv.style.display = "block";
+    messageErrorDiv.style.display = "block";
+    isValid = false;
+  } else {
+    nameErrorDiv.style.display = "none";
+  }
+  if (emailInput.value === "") {
+    emailErrorDiv.style.display = "block";
+    wrongEmail.style.display = "none";
+    messageErrorDiv.style.display = "block";
+    isValid = false;
+  } else {
+    emailErrorDiv.style.display = "none";
+    if (!validateEmail(emailInput.value)) {
+      wrongEmail.style.display = "block";
+      emailInput.classList.add("active-border");
+      messageErrorDiv.style.display = "block";
+      isValid = false;
+    } else {
+      wrongEmail.style.display = "none";
+      emailInput.classList.remove("active-border");
+    }
+  }
+
+
+  if (nameInput.value === "") {
+    nameInput.classList.add("active-border");
+    connect_bg.classList.add("image-error");
+  } else {
+    nameInput.classList.remove("active-border");
+    connect_bg.classList.remove("image-error");
+  }
+
+  if (emailInput.value === "") {
+    emailInput.classList.add("active-border");
+    connect_bg.classList.add("image-error");
+  } else {
+    emailInput.classList.remove("image-error");
+  }
+
+  return isValid;
+}
+
+document.getElementById("mG61Hd").addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  spinner.classList.add("spinner");
+  const isValid = validateForm();
+
+  if (isValid) {
+    const googleFormEndpoint = "https://docs.google.com/forms/d/e/1FAIpQLSd7hzCChSpt_pemC9VMe4EQrYmRnNTbB5AkLVUYdQiFmyEXJA/formResponse";
+    let request = new XMLHttpRequest();
+    request.open('POST', googleFormEndpoint, true);
+
+    request.onload = function () {
+      
+      if (request.status === 200) {
+        
+        openPopup();
+        clearFormFields();
+      }
+    };
+
+    request.onerror = function (e) {
+      
+      openPopup();
+      clearFormFields();
+      spinner.classList.remove("spinner");
+      document.getElementById("send-msg").blur();
+    };
+    request.send(new FormData(event.target));
+  }
+  setTimeout(() => {
+    spinner.classList.remove("spinner");
+    document.getElementById("send-msg").blur();
+  }, 1000);
+  }
+  
+  
+
+</script>  
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+  
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-left">
+            <div class="logo-wrapper">
+              <a href="../index.html">
+                <img src="../images/footer_logo.png" alt="footer logo">
+              </a>
+            </div>
+            <div class="footer-copyright">
+              <p>Copyright © 2026 AELIUS Exploitation Technologies. All Rights Reserved</p>
+            </div>
+          </div>
+          <div class="footer-right">
+            <nav class="site-navbar">
+              <ul>
+                
+                <li class="list-item" id="nav-main-0">
+                  <a href="../focus-and-specialties/index.html">Focus and Specialties</a>
+                </li>
+                
+                <li class="list-item" id="nav-main-1">
+                  <a href="../join-our-team/index.html">Join Our Team</a>
+                </li>
+                
+                <li class="list-item" id="nav-main-2">
+                  <a href="index.html">Connect</a>
+                </li>
+                
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-copyright-responsive">
+            <p>Copyright © 2026 AELIUS Exploitation Technologies. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const listItems = document.querySelectorAll(".list-item");
+    
+    function getCurrentURL() {
+      const currentURL = window.location.pathname;
+      return currentURL.endsWith("/") ? currentURL.slice(0, -1) : currentURL;
+    }
+    
+    function isLinkActive(link, currentURL) {
+      const linkURL = link.getAttribute("href");
+      return currentURL === linkURL;
+    }
+    
+    function setActiveImage() {
+      const currentURL = getCurrentURL();
+      listItems.forEach((item) => {
+        const link = item.querySelector("a");
+        const isActive = isLinkActive(link, currentURL);
+        if (isActive) {
+          link.classList.add("active-footer-nav");
+        } else {
+          link.classList.remove("active-footer-nav");
+        }
+      });
+    }
+    
+    setActiveImage();
+  });
+</script>
+
+    <script type="text/javascript" src="../js/carousel.js/index.html"></script>
+    <link rel="stylesheet" href="../css/carousel.css/index.html">
+    
+<link rel="stylesheet" href="../slick/slick.scss">
+<link rel="stylesheet" href="../slick/slick-theme.scss">
+
+<script src="../slick/slick.min.js"></script>
+  
+</div></body></html>

@@ -1,0 +1,885 @@
+<!DOCTYPE html><html lang="en"><head>
+	<meta name="generator" content="Hugo 0.85.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>AELIUS Exploitation Technologies</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+      
+    <meta name="robots" content="max-image-preview:large">
+    
+  </head>
+  <body id="home-body">
+    
+    
+    
+
+
+
+  
+    <title>Header</title>
+    
+    <link href="sass/main.min.36c12509526e3350765bade6eb3091e39fa0ad0a3111c28d61d4e18739cf548d.css" rel="stylesheet">
+  
+  
+    
+    <header>
+      <div class="header">
+        <div class="container">
+          <div class="header-inner">
+            <div class="logo-wrapper">
+              <a href="index.html">
+                <img src="images/logo.gif" alt="header logo">
+              </a>
+            </div>
+            <span class="navbar-icon block" id="toggle-nav"><span></span></span>
+            <nav class="navbar">
+              <div class="navbar-brand">
+                <a href="index.html">
+                  <img src="images/logo.gif" alt="header logo">
+                </a>
+              </div>
+              <div class="navbar-links">
+                <ul>
+                  
+                  <li class="list-item">
+                    <a href="focus-and-specialties/index.html"><img src="images/focus-icon.png" alt="Focus and Specialties" class="mobile-menu-image">
+                      Focus and Specialties
+                    </a>
+                  </li>
+                  
+                  <li class="list-item">
+                    <a href="join-our-team/index.html"><img src="images/team-icon.png" alt="Join Our Team" class="mobile-menu-image">
+                      Join Our Team
+                    </a>
+                  </li>
+                  
+                  <li class="list-item">
+                    <a href="connect/index.html"><img src="images/connect-icon.png" alt="Connect" class="mobile-menu-image">
+                      Connect
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </nav>
+            <nav class="site-navbar">
+              <ul>
+                
+                <li class="list-item" id="nav-main-0">
+                  <a href="focus-and-specialties/index.html" class="image">
+                    <img src="images/focus-icon.png" alt="Focus and Specialties">
+                    Focus and Specialties
+                  </a>
+                </li>
+                
+                <li class="list-item" id="nav-main-1">
+                  <a href="join-our-team/index.html" class="image">
+                    <img src="images/team-icon.png" alt="Join Our Team">
+                    Join Our Team
+                  </a>
+                </li>
+                
+                <li class="list-item" id="nav-main-2">
+                  <a href="connect/index.html" class="image">
+                    <img src="images/connect-icon.png" alt="Connect">
+                    Connect
+                  </a>
+                </li>
+                
+              </ul>
+            </nav>
+            
+          </div>
+        </div>
+      </div>
+    </header>
+  
+
+
+
+
+<script>
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbarToggle = document.querySelectorAll(".navbar-icon");
+    const headerLinks = document.querySelectorAll(".header-inner");
+
+    
+    function closePopups() {
+      headerLinks.forEach((serviceSection) => {
+        serviceSection.classList.remove("active");
+      });
+    }
+
+    navbarToggle.forEach((toggle, index) => {
+      toggle.addEventListener("click", function (event) {
+        event.stopPropagation(); 
+
+        
+        headerLinks[index].classList.toggle("active");
+      });
+    });
+
+    
+    document.addEventListener("click", function (event) {
+      const clickInsideToggle = Array.from(navbarToggle).some((toggle) =>
+        toggle.contains(event.target)
+      );
+
+      if (!clickInsideToggle) {
+        closePopups();
+      }
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const listItems = document.querySelectorAll(".list-item");
+
+    
+    function getCurrentURL() {
+      const currentURL = window.location.pathname;
+      return currentURL.endsWith("/") ? currentURL.slice(0, -1) : currentURL;
+    }
+
+    
+    function isLinkActive(link, currentURL) {
+      const linkURL = link.getAttribute("href");
+      return currentURL === linkURL;
+    }
+
+    
+    function setActiveImage() {
+      const currentURL = getCurrentURL();
+      listItems.forEach((item) => {
+        const link = item.querySelector("a");
+        const isActive = isLinkActive(link, currentURL);
+        const image = item.querySelector("img");
+        if (isActive) {
+          image?.classList.add("active-nav");
+        } else {
+          image?.classList.remove("active-nav");
+        }
+      });
+    }
+
+    
+    setActiveImage();
+  });
+</script>
+
+    <section><section>
+  
+  
+  
+     
+    <section>
+      <div class="hero">
+        <div class="container">
+          <div class="hero-row">
+            <div class="hero-left">
+              <h1 class="section-title">This Is AELIUS.</h1>
+              <p></p><p>We specialize in analyzing big data and in advanced technology integration and insertion.</p>
+<p>AELIUS Exploitation Technologies provides specialized products, integrated solutions, and professional services. We focus on rapid technology development in support of the US Government and commercial sector clients.</p>
+<p>AELIUS Exploitation Technologies is a Service-Disabled Veteran-Owned Small Business (SDVOSB).</p>
+<p></p>
+            </div>
+            <div class="hero-right">
+              <div class="banner_img_top">
+                <img src="images/banner-img.png" alt="hero image">
+
+                <button id="home-hero-btn" class="middle-text popup-trigger learn-more-btn btn-primary" style="display: none">
+                  Aelius Origin
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="popup-overlays" style="display: none">
+            <div id="popup-mains" class="aelius-btn-popups">
+              <div class="close-toggle-icon">
+                <img src="images/close-icon.png" alt="" class="close-home-popup">
+              </div>
+
+              <div class="popup-top-big-image">
+                <div class="popup-shapes-image">
+                  
+                  <div>
+                    <img src="images/origin-shape.png" alt="left background image">
+                  </div>
+                  
+                  <div>
+                    <img src="images/origin-shape-right.png" alt="right background image">
+                  </div>
+                  
+                </div>
+                <img src="images/popup-logo-home-image.jpeg" alt="hero popup logo">
+              </div>
+
+              <div class="popup-detail-text">
+                <div class="popup-title">
+                  <h1>Aelius Origin</h1>
+                </div>
+                <div class="popup-inner-text">
+                  <p></p><p>Finding a name for a new technology company is never easy. The founders are big movie buffs; both are also US Army Veterans and of Italian heritage. Various movie quotes and imagery shaped how they wanted to kick off their new company: as high-tech bleeding edge technologists, forward-thinking, actively helping our government and warfighters, and with a solid ethical backbone, the name had to mean something and not just sound cool.</p>
+<p>While watching the Ridley Scott movie Gladiator, starring Russell Crowe as a once great Roman General Maximus Decimus Meridius who becomes a slave / gladiator to avenge his family, he is referred to as Aelius Meridius as he is announced on the Coliseum arena. Aelius, it turns out, means “family of” in Latin – so “of the Family of Meridius” – perfect. As Joe was explaining it all to his partner, Guy Filippelli, Guy’s response was an email from GoDaddy having just bought domain rights to “Aelius Exploitation Technologies”. Our name therefore stands for “Family of Exploitation Technologies” and has ties both to the founders' Italian culture and honoring their military service and our nation’s sacrifices.</p>
+<p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+       
+  
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const popupOverlays = document.querySelectorAll(".popup-overlays");
+    const popupCloseBtns = document.querySelectorAll(".close-home-popup");
+    const popupTriggers = document.querySelectorAll(".popup-trigger");
+    const homeBody = document.getElementById("home-body");
+
+    function openPopup(index) {
+      popupOverlays[index].style.display = "flex";
+      document.querySelector(".navbar-icon.block").classList.add("no-blur");
+    }
+
+    function closePopup(index) {
+      popupOverlays[index].style.display = "none";
+      document.querySelector(".navbar-icon.block").classList.remove("no-blur");
+    }
+
+    for (let i = 0; i < popupCloseBtns.length; i++) {
+      popupCloseBtns[i].addEventListener("click", function () {
+        closePopup(i);
+        homeBody.classList.remove("open-popup-style");
+      });
+    }
+
+    for (let i = 0; i < popupTriggers.length; i++) {
+      popupTriggers[i].addEventListener("click", function () {
+        openPopup(i);
+      });
+    }
+
+    document.addEventListener("click", function (event) {
+      for (let i = 0; i < popupOverlays.length; i++) {
+        const clickInsidePopup = popupOverlays[i].contains(event.target);
+        const clickInsideTrigger = popupTriggers[i].contains(event.target);
+
+        if (!clickInsidePopup && !clickInsideTrigger) {
+          closePopup(i);
+        }
+      }
+    });
+    document.addEventListener("keydown", function (event) {
+      for (let i = 0; i < popupOverlays.length; i++) {
+        const clickInsidePopup = popupOverlays[i].contains(event.target);
+        const clickInsideTrigger = popupTriggers[i].contains(event.target);
+
+        if (!clickInsidePopup && !clickInsideTrigger) {
+          if (event.key === "Escape") {
+            document
+              .getElementById("home-body")
+              .classList.remove(".open-popup")
+              .classList.remove("navbar-icon block");
+            closePopup(i);
+          }
+        }
+      }
+    });
+    function hidePopupOnEsc(event) {
+      if (event.key === "Escape") {
+        var popup = document.querySelector(".popup-overlays");
+        popup.style.display = "none";
+      }
+    }
+    document.addEventListener("keydown", hidePopupOnEsc);
+  });
+</script>
+<script>
+  
+
+  
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const popupToggle = document.querySelectorAll(".popup-trigger");
+    const popupMain = document.querySelectorAll("#popup-mains");
+    const serviceSections = document.querySelectorAll(".hero");
+    const popupOverlays = document.getElementById("home-body");
+    
+    
+
+    
+    function closePopups() {
+      serviceSections.forEach((serviceSection) => {
+        serviceSection.classList.remove("body");
+      });
+      popupOverlays.classList.remove("open-popup-style"); 
+      
+    }
+
+    
+    function openPopup(index) {
+      serviceSections[index].classList.add("body");
+      popupOverlays.classList.add("open-popup-style");
+      
+    }
+
+    popupToggle.forEach((toggle, index) => {
+      toggle.addEventListener("click", function (event) {
+        event.stopPropagation(); 
+        closePopups(); 
+        openPopup(index);
+        const serviceTextElement = toggle.querySelector(".service-text h3");
+        if (serviceTextElement) {
+          serviceTextElement.classList.add("service-text-activated");
+        }
+        let visitedCount = 0;
+        document.querySelectorAll(".service-text h3").forEach((element) => {
+          if (element.classList.contains("service-text-activated")) {
+            visitedCount++;
+          }
+        });
+        if (
+          visitedCount ===
+            document.querySelectorAll(".service-text h3")?.length &&
+          document.getElementById("home-hero-btn")
+        ) {
+          document.getElementById("home-hero-btn").style.display = "block";
+        }
+      });
+    });
+
+    
+    document.addEventListener("click", function (event) {
+      const clickInsidePopup = Array.from(popupMain).some((toggle) =>
+        toggle.contains(event.target)
+      );
+      const clickInsideClose = Array.from(popupCloseBtns).some((toggle) =>
+        toggle.contains(event.target)
+      );
+
+      if (!clickInsidePopup && !clickInsideClose) {
+        closePopups();
+      }
+    });
+
+    
+    popupCloseBtns.forEach((closeBtn, index) => {
+      closeBtn.addEventListener("click", function (event) {
+        event.stopPropagation(); 
+        closePopups();
+      });
+    });
+  });
+</script>
+ 
+     
+  <div class="service-group">
+    
+    <div class="service-section" id="serviceToggle">
+      <div class="service-inner">
+        <div class="popupTrigger service-flex" style="background-image: url('/images/leadership-vision.jpg');">
+          <div class="service-text">
+            
+            <h3>Leadership Vision</h3>
+          </div>
+        </div>
+
+        <div id="service-popup" class="popup-overlay hide service-popup popup">
+          <div id="popup-main">
+            <div class="close-popup">
+              
+              <img src="images/close-icon.png" alt="" class="popup-close-btn">
+            </div>
+            
+            <div class="popup-title-bg">
+              <img src="images/leadership-big_1.jpeg" alt="image" class="popup-images">
+              <div class="popup-image-text">
+                <h2 class="service-section-title">
+                  Leadership Vision
+                </h2>
+              </div>
+            </div>
+            <div class="popup-detail">
+              <p>AELIUS leverages decades of unique expertise, methodologies, and processes that anticipate the complexity and constant evolution of information age technologies and rapidly integrates them into user-defined tailored solutions that ensures our customers’ and war fighters’ continued dominance and technological competitive edge. Our products and services combine and rapidly integrate breakthrough technologies that are tailored, flexible, and survivable – exactly what you would expect from a hand-picked team of world-class technologists, operators, and specialized engineers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="service-section" id="serviceToggle">
+      <div class="service-inner">
+        <div class="popupTrigger service-flex" style="background-image: url('/images/service-img2.jpg');">
+          <div class="service-text">
+            
+            <h3>Mission Statement</h3>
+          </div>
+        </div>
+
+        <div id="service-popup" class="popup-overlay hide service-popup popup">
+          <div id="popup-main">
+            <div class="close-popup">
+              
+              <img src="images/close-icon.png" alt="" class="popup-close-btn">
+            </div>
+            
+            <div class="popup-title-bg">
+              <img src="images/mission-big_1.jpeg" alt="image" class="popup-images">
+              <div class="popup-image-text">
+                <h2 class="service-section-title">
+                  Mission Statement
+                </h2>
+              </div>
+            </div>
+            <div class="popup-detail">
+              <p>Be the most trusted “go-to” partner that rapidly delivers specialized products, integrated solutions, and professional services focused on niche, secure, and deployable cutting-edge technologies. When others say it can’t be done, we prove otherwise.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="service-section" id="serviceToggle">
+      <div class="service-inner">
+        <div class="popupTrigger service-flex" style="background-image: url('/images/service-img3.jpg');">
+          <div class="service-text">
+            
+            <h3>Company History</h3>
+          </div>
+        </div>
+
+        <div id="service-popup" class="popup-overlay hide service-popup popup">
+          <div id="popup-main">
+            <div class="close-popup">
+              
+              <img src="images/close-icon.png" alt="" class="popup-close-btn">
+            </div>
+            
+            <div class="popup-title-bg">
+              <img src="images/company-history-big_1.jpg" alt="image" class="popup-images">
+              <div class="popup-image-text">
+                <h2 class="service-section-title">
+                  Company History
+                </h2>
+              </div>
+            </div>
+            <div class="popup-detail">
+              <p>AELIUS is a Service-Disabled Veteran-Owned Small Business (SDVOSB) established in 2012 to fill a gap in defense contracting – that of niche specialized research, rapid development, and advanced technology integration. In the past, there have been few vendors / companies positioned well enough to understand the inner workings and core tasks of combatant commands at the unit and operator level, to be able to simultaneously translate that accurately to a uniquely-skilled set of engineers, and then direct and manage the same group of hand-picked” engineers and computer scientists in the research and development of the new capability. AELIUS does exactly that. We work directly with the end-user operators, manage the core development teams and partners, and further provide the subject matter expertise and training to ensure delivery, integration with legacy capabilities, and customer satisfaction.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="service-section" id="serviceToggle">
+      <div class="service-inner">
+        <div class="popupTrigger service-flex" style="background-image: url('/images/service-img4.jpg');">
+          <div class="service-text">
+            
+            <h3>Company Values</h3>
+          </div>
+        </div>
+
+        <div id="service-popup" class="popup-overlay hide service-popup popup">
+          <div id="popup-main">
+            <div class="close-popup">
+              
+              <img src="images/close-icon.png" alt="" class="popup-close-btn">
+            </div>
+            
+            <div class="popup-title-bg">
+              <img src="images/company-values-big_1.jpg" alt="image" class="popup-images">
+              <div class="popup-image-text">
+                <h2 class="service-section-title">
+                  Company Values
+                </h2>
+              </div>
+            </div>
+            <div class="popup-detail">
+              <p>The AELIUS team members come with extensive experience either as senior Defense Program Managers, Engineers, or as Operators within our most coveted specialized mission units. Our personnel are at the top of their field. AELIUS is formed around the ethos of trust, integrity, and a high energy, can-do-anything Special Operations mentality. The AELIUS team possesses rare, highly-valued expertise in transitioning sensitive technologies from research and development to deployed operations (from the cradle to the grave). Furthermore, we provide expert program management and technology integrators to customers who require cutting-edge technologies that must be tailored to match their distinctive mission requirements and specific operating environments. We accomplish this with world-class engineering teams and vetted partners, creating solutions for our customers' hardest problems. We are well known and trusted partners within this unique community. Where failure is not an option or when the odds are against us, AELIUS is there to solve our customer’s toughest problems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="service-section" id="serviceToggle">
+      <div class="service-inner">
+        <div class="popupTrigger service-flex" style="background-image: url('/images/service-img5.jpg');">
+          <div class="service-text">
+            
+            <h3>Company Culture</h3>
+          </div>
+        </div>
+
+        <div id="service-popup" class="popup-overlay hide service-popup popup">
+          <div id="popup-main">
+            <div class="close-popup">
+              
+              <img src="images/close-icon.png" alt="" class="popup-close-btn">
+            </div>
+            
+            <div class="popup-title-bg">
+              <img src="images/company-culture-big_1.jpg" alt="image" class="popup-images">
+              <div class="popup-image-text">
+                <h2 class="service-section-title">
+                  Company Culture
+                </h2>
+              </div>
+            </div>
+            <div class="popup-detail">
+              <p>AELIUS fosters an inclusive, collaborative, and agile workspace focused on innovative solutions to solve our customers' most challenging and complex problem sets. Our strength is in our motivated and highly skilled team who come from all walks of life. As a member of our team, we inspire creativity, ingenuity, and hard work and empower individual potential in a dream job atmosphere. There are no limitations to what you can achieve at AELIUS, only unlimited possibilities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="service-section" id="serviceToggle">
+      <div class="service-inner">
+        <div class="popupTrigger service-flex" style="background-image: url('/images/service-img6.jpg');">
+          <div class="service-text">
+            
+            <h3>Community</h3>
+          </div>
+        </div>
+
+        <div id="service-popup" class="popup-overlay hide service-popup popup">
+          <div id="popup-main">
+            <div class="close-popup">
+              
+              <img src="images/close-icon.png" alt="" class="popup-close-btn">
+            </div>
+            
+            <div class="popup-title-bg">
+              <img src="images/community-big_1.jpg" alt="image" class="popup-images">
+              <div class="popup-image-text">
+                <h2 class="service-section-title">
+                  Community
+                </h2>
+              </div>
+            </div>
+            <div class="popup-detail">
+              <p>With team members and their families living and working across the country, AELIUS recognizes the value of building continuity between small businesses and local communities. AELIUS fosters and strengthens those community relationships by supporting local school programs in athletics, STEM, and the performing arts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+   
+
+
+<script>
+  
+  function setCookieWithExpiration(name, value, hours) {
+    var date = new Date();
+    date.setTime(date.getTime() + hours * 60 * 60 * 1000);
+    var expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  }
+
+  
+  function checkCookie(name) {
+    var cookies = document.cookie.split("; ");
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i].split("=");
+      if (cookie[0] === name) {
+        return cookie[1];
+      }
+    }
+    return "";
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const popupOverlays = document.querySelectorAll(".popup-overlay");
+    const popupCloseBtns = document.querySelectorAll(".popup-close-btn");
+    const popupTriggers = document.querySelectorAll(".popupTrigger");
+
+    function openPopup(index) {
+      
+      popupOverlays[index].classList.remove("hide");
+    }
+
+    function closePopup(index) {
+      
+      popupOverlays[index].classList.add("hide");
+    }
+
+    for (let i = 0; i < popupCloseBtns.length; i++) {
+      popupCloseBtns[i].addEventListener("click", function () {
+        closePopup(i);
+      });
+    }
+    document.addEventListener("keydown", function (event) {
+      for (let i = 0; i < popupOverlays.length; i++) {
+        const clickInsidePopup = popupOverlays[i].contains(event.target);
+        const clickInsideTrigger = popupTriggers[i].contains(event.target);
+        if (!clickInsidePopup && !clickInsideTrigger) {
+          if (event.key === "Escape") {
+            document.getElementById("home-body").classList.remove("open-popup");
+            closePopup(i);
+            document.getElementById("home-body").classList.remove("open-popup-style") 
+          }
+        }
+      }
+    });
+    for (let i = 0; i < popupTriggers.length; i++) {
+      popupTriggers[i].addEventListener("click", function () {
+        openPopup(i);
+
+        
+        var openedPopupKey = "service_box_" + i;
+
+        var openedPopup = checkCookie(openedPopupKey);
+        if (!openedPopup) {
+          setCookieWithExpiration(openedPopupKey, "set", 24);
+
+          
+          const serviceTextElement =
+            popupTriggers[i].querySelector(".service-text h3");
+          if (serviceTextElement) {
+            serviceTextElement.classList.add("service-text-activated");
+          }
+        }
+      });
+
+      
+      var openedPopupKey = "service_box_" + i;
+      var openedPopup = checkCookie(openedPopupKey);
+      if (openedPopup) {
+        const serviceTextElement =
+          popupTriggers[i].querySelector(".service-text h3");
+        if (serviceTextElement) {
+          serviceTextElement.classList.add("service-text-activated");
+        }
+      }
+    }
+
+    document.addEventListener("click", function (event) {
+      for (let i = 0; i < popupOverlays.length; i++) {
+        const clickInsidePopup = popupOverlays[i].contains(event.target);
+        const clickInsideTrigger = popupTriggers[i].contains(event.target);
+
+        if (!clickInsidePopup && !clickInsideTrigger) {
+          closePopup(i);
+        }
+      }
+    });
+  });
+
+  
+  function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  }
+
+  
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(";");
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == " ") c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+  function checkServiceTextActivated() {
+    const serviceTextElements = document.querySelectorAll(
+      ".service-text-activated"
+    );
+    const homeHeroBtn = document.getElementById("home-hero-btn");
+
+    if (serviceTextElements.length > 0) {
+      homeHeroBtn.style.display = "block";
+    }
+  }
+
+  
+  document.addEventListener("DOMContentLoaded", checkServiceTextActivated);
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const popupToggle = document.querySelectorAll(".popupTrigger");
+    const popupMain = document.querySelectorAll("#popup-main");
+    const serviceSections = document.querySelectorAll(".service-section");
+    const popupOverlays = document.getElementById("home-body");
+    const popupCloseBtns = document.querySelectorAll(".close-popup");
+
+    
+    function closePopups() {
+      serviceSections.forEach((serviceSection) => {
+        serviceSection.classList.remove("body");
+      });
+      popupOverlays.classList.remove("open-popup-style"); 
+      
+    }
+
+    
+    function openPopup(index) {
+      serviceSections[index].classList.add("body");
+      popupOverlays.classList.add("open-popup-style");
+      
+    }
+
+    popupToggle.forEach((toggle, index) => {
+      toggle.addEventListener("click", function (event) {
+        event.stopPropagation(); 
+        closePopups(); 
+        openPopup(index);
+        const serviceTextElement = toggle.querySelector(".service-text h3");
+        if (serviceTextElement) {
+          serviceTextElement.classList.add("service-text-activated");
+        }
+        let visitedCount = 0;
+        document.querySelectorAll(".service-text h3").forEach((element) => {
+          if (element.classList.contains("service-text-activated")) {
+            visitedCount++;
+          }
+        });
+        if (
+          visitedCount ===
+            document.querySelectorAll(".service-text h3")?.length &&
+          document.getElementById("home-hero-btn")
+        ) {
+          document.getElementById("home-hero-btn").style.display = "block";
+        }
+      });
+    });
+
+    
+    document.addEventListener("click", function (event) {
+      const clickInsidePopup = Array.from(popupMain).some((toggle) =>
+        toggle.contains(event.target)
+      );
+      const clickInsideClose = Array.from(popupCloseBtns).some((toggle) =>
+        toggle.contains(event.target)
+      );
+      
+      const clickInsideHero = document.getElementById("popup-mains")?.contains?.(event.target)
+      if (!clickInsidePopup && !clickInsideClose && !clickInsideHero) {
+          closePopups();
+      }
+    });
+
+    
+    popupCloseBtns.forEach((closeBtn, index) => {
+      closeBtn.addEventListener("click", function (event) {
+        event.stopPropagation(); 
+        closePopups();
+      });
+    });
+  });
+</script>
+
+</section>
+</section>
+    
+
+    
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+  
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-left">
+            <div class="logo-wrapper">
+              <a href="index.html">
+                <img src="images/footer_logo.png" alt="footer logo">
+              </a>
+            </div>
+            <div class="footer-copyright">
+              <p>Copyright © 2026 AELIUS Exploitation Technologies. All Rights Reserved</p>
+            </div>
+          </div>
+          <div class="footer-right">
+            <nav class="site-navbar">
+              <ul>
+                
+                <li class="list-item" id="nav-main-0">
+                  <a href="focus-and-specialties/index.html">Focus and Specialties</a>
+                </li>
+                
+                <li class="list-item" id="nav-main-1">
+                  <a href="join-our-team/index.html">Join Our Team</a>
+                </li>
+                
+                <li class="list-item" id="nav-main-2">
+                  <a href="connect/index.html">Connect</a>
+                </li>
+                
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-copyright-responsive">
+            <p>Copyright © 2026 AELIUS Exploitation Technologies. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const listItems = document.querySelectorAll(".list-item");
+    
+    function getCurrentURL() {
+      const currentURL = window.location.pathname;
+      return currentURL.endsWith("/") ? currentURL.slice(0, -1) : currentURL;
+    }
+    
+    function isLinkActive(link, currentURL) {
+      const linkURL = link.getAttribute("href");
+      return currentURL === linkURL;
+    }
+    
+    function setActiveImage() {
+      const currentURL = getCurrentURL();
+      listItems.forEach((item) => {
+        const link = item.querySelector("a");
+        const isActive = isLinkActive(link, currentURL);
+        if (isActive) {
+          link.classList.add("active-footer-nav");
+        } else {
+          link.classList.remove("active-footer-nav");
+        }
+      });
+    }
+    
+    setActiveImage();
+  });
+</script>
+
+    <div class="popup_overlay"></div>
+    <script src="scripts/script.js/index.html"></script>
+  
+
+</body></html>

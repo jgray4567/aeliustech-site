@@ -1,0 +1,737 @@
+<html lang="en"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Focus and Specialties - AELIUS Exploitation Technologies</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    
+    <link rel="canonical" href="https://aeliustech.com/focus-and-specialties/">
+      
+    <meta name="robots" content="max-image-preview:large">
+    
+  </head>
+  <body id="home-body">
+    
+
+
+
+  
+    <title>Header</title>
+    
+    <link href="../sass/main.min.36c12509526e3350765bade6eb3091e39fa0ad0a3111c28d61d4e18739cf548d.css" rel="stylesheet">
+  
+  
+    
+    <header>
+      <div class="header">
+        <div class="container">
+          <div class="header-inner">
+            <div class="logo-wrapper">
+              <a href="../index.html">
+                <img src="../images/logo.gif" alt="header logo">
+              </a>
+            </div>
+            <span class="navbar-icon block" id="toggle-nav"><span></span></span>
+            <nav class="navbar">
+              <div class="navbar-brand">
+                <a href="../index.html">
+                  <img src="../images/logo.gif" alt="header logo">
+                </a>
+              </div>
+              <div class="navbar-links">
+                <ul>
+                  
+                  <li class="list-item">
+                    <a href="index.html"><img src="../images/focus-icon.png" alt="Focus and Specialties" class="mobile-menu-image">
+                      Focus and Specialties
+                    </a>
+                  </li>
+                  
+                  <li class="list-item">
+                    <a href="../join-our-team/index.html"><img src="../images/team-icon.png" alt="Join Our Team" class="mobile-menu-image">
+                      Join Our Team
+                    </a>
+                  </li>
+                  
+                  <li class="list-item">
+                    <a href="../connect/index.html"><img src="../images/connect-icon.png" alt="Connect" class="mobile-menu-image">
+                      Connect
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </nav>
+            <nav class="site-navbar">
+              <ul>
+                
+                <li class="list-item" id="nav-main-0">
+                  <a href="index.html" class="image">
+                    <img src="../images/focus-icon.png" alt="Focus and Specialties">
+                    Focus and Specialties
+                  </a>
+                </li>
+                
+                <li class="list-item" id="nav-main-1">
+                  <a href="../join-our-team/index.html" class="image">
+                    <img src="../images/team-icon.png" alt="Join Our Team">
+                    Join Our Team
+                  </a>
+                </li>
+                
+                <li class="list-item" id="nav-main-2">
+                  <a href="../connect/index.html" class="image">
+                    <img src="../images/connect-icon.png" alt="Connect">
+                    Connect
+                  </a>
+                </li>
+                
+              </ul>
+            </nav>
+            
+          </div>
+        </div>
+      </div>
+    </header>
+  
+
+
+
+
+<script>
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbarToggle = document.querySelectorAll(".navbar-icon");
+    const headerLinks = document.querySelectorAll(".header-inner");
+
+    
+    function closePopups() {
+      headerLinks.forEach((serviceSection) => {
+        serviceSection.classList.remove("active");
+      });
+    }
+
+    navbarToggle.forEach((toggle, index) => {
+      toggle.addEventListener("click", function (event) {
+        event.stopPropagation(); 
+
+        
+        headerLinks[index].classList.toggle("active");
+      });
+    });
+
+    
+    document.addEventListener("click", function (event) {
+      const clickInsideToggle = Array.from(navbarToggle).some((toggle) =>
+        toggle.contains(event.target)
+      );
+
+      if (!clickInsideToggle) {
+        closePopups();
+      }
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const listItems = document.querySelectorAll(".list-item");
+
+    
+    function getCurrentURL() {
+      const currentURL = window.location.pathname;
+      return currentURL.endsWith("/") ? currentURL.slice(0, -1) : currentURL;
+    }
+
+    
+    function isLinkActive(link, currentURL) {
+      const linkURL = link.getAttribute("href");
+      return currentURL === linkURL;
+    }
+
+    
+    function setActiveImage() {
+      const currentURL = getCurrentURL();
+      listItems.forEach((item) => {
+        const link = item.querySelector("a");
+        const isActive = isLinkActive(link, currentURL);
+        const image = item.querySelector("img");
+        if (isActive) {
+          image?.classList.add("active-nav");
+        } else {
+          image?.classList.remove("active-nav");
+        }
+      });
+    }
+
+    
+    setActiveImage();
+  });
+</script>
+      
+    
+    
+
+  
+        
+  
+
+
+    
+  
+        
+  
+
+ 
+  
+    <div class="focus-special">
+       
+      <div class="focus-section">
+        <div class="container">
+          <h1 class="section-title">Focus and Specialties</h1>
+          <div class="focus-inner">
+            
+            <div class="circle-middle smallScreen">
+              <img src="../images/world-icon.jpeg" alt="main image" class="middle-round-img">
+              <div class="middle-overlay"></div>
+            </div>
+            <div class="around-circle-group-section" id="circle_section">
+              
+              <div class="circle-middle bigScreen">
+                <img src="../images/world-icon.jpeg" alt="main image" class="middle-round-img">
+                <div class="middle-overlay"></div>
+              </div>
+              <ul class="round-circle-group circle">
+                
+                <li id="circle-item-0" class="circle-items-list">
+                  <img src="../images/secure-icon-new-1.png" alt="first circle image" class="circle-animated-image">
+                  <img src="../images/circle-1-bg.png" alt="image" class="hover-bg-images">
+                  <div class="circle-hover">
+                    <h6 class="focus-hover-text"><p>Secure Architectures</p>
+<p>and Devices</p>
+</h6>
+                    <div class="circle-details">
+                      <p></p><p>Our team of professionals has advanced expertise in unified security solutions ranging from small point to point communications to complex secure networks. We focus on providing specialized design and integration services that incorporate the protection of high value systems and information. We accomplish this by customizing network architectures to fit the target. This includes incorporating physical and logical network environments across multiple platforms.</p>
+<p>AELIUS engineers' support and design skills are device agnostic and provide a seamless, customized experience based on requirements. Our diverse background enables the team to rapidly determine the best device solution to support the requirements. If there isn’t a device available to meet the requirements, our team has the ability, based on requirements, to engineer specialized devices within our lab environment. Our skills cover LAN, WAN, cellular, satellite, IoT, sensors, and computing devices across platforms or within standalone environments around the world.</p>
+<p></p>
+                    </div>
+                  </div>
+                </li>
+                
+                <li id="circle-item-1" class="circle-items-list">
+                  <img src="../images/professional-icon.png" alt="second circle image" class="circle-animated-image">
+                  <img src="../images/circle-2-bg.png" alt="image" class="hover-bg-images">
+                  <div class="circle-hover">
+                    <h6 class="focus-hover-text"><p>Professional Services</p>
+<p>and Subject Matter Expertise</p>
+</h6>
+                    <div class="circle-details">
+                      <p></p><p>AELIUS' professional services are intrinsically tied to our core as a company. Our SMEs and engineers utilize their knowledge, skills, abilities, and experience to provide a wide array of technical solutions.</p>
+<p>Our approach to this is a user-defined developmental process to satisfy unique customer requirements under complex conditions, to achieve time-sensitive, mission-driven objectives. Using this methodology in a cross-functional team, working as closely as possible with the end user, allows AELIUS to effectively and rapidly leverage our collective knowledge base to ensure customer satisfaction and mission success.</p>
+<p>AELIUS has an unwavering commitment to provide world-class professional services to our brethren in Special Operations, the Intelligence professions, and law enforcement. Every day, we bring our best efforts and abilities to bear for these communities to not only protect their operations but also to ensure the survivability of their personnel.</p>
+<p></p>
+                    </div>
+                  </div>
+                </li>
+                
+                <li id="circle-item-2" class="circle-items-list">
+                  <img src="../images/advance-icon.png" alt="image" class="circle-animated-image">
+                  <img src="../images/circle-3-bg.png" alt="image" class="hover-bg-images">
+                  <div class="circle-hover">
+                    <h6 class="focus-hover-text"><p>Advanced Technology</p>
+<p>Integration and Insertion</p>
+</h6>
+                    <div class="circle-details">
+                      <p></p><p>AELIUS' cross-functional team leverages past experience in engineering, computer science, machine learning, autonomy, and 3D visualization to rapidly identify off-the-shelf solutions combined with past technical development and performance to target and resolve the technical endstate. The team continues to directly involve the operator during each phase of the development resulting in a rapid iteration over minimal viable product (MVP) solutions that increasingly meet user needs and can be transitioned to other industry partners.</p>
+<p>This process allows the team to go from concept to prototype at the speed of combat, resulting in viable government-owned solutions in days-not months or years.</p>
+<p></p>
+                    </div>
+                  </div>
+                </li>
+                
+                <li id="circle-item-3" class="circle-items-list">
+                  <img src="../images/cyber-icon.png" alt="image" class="circle-animated-image">
+                  <img src="../images/circle-4-bg.png" alt="image" class="hover-bg-images">
+                  <div class="circle-hover">
+                    <h6 class="focus-hover-text"><p>Cyber Security</p>
+<p>and Training</p>
+</h6>
+                    <div class="circle-details">
+                      <p></p><p>AELIUS’s staff includes known experts in the computer security and digital forensics fields. We have been actively involved with anonymity communities and have assisted organizations that use these technologies for both online anonymity and adversarial identification. Our background spans the entire network architecture, from application security to networking, and includes human biometrics and profiling.</p>
+<p>We have developed multiple courses that teach users about their cyber presence in the online and real world. One of them, Cyber Security Awareness (CSA), teaches analysts how to be anonymous online and how to breach online anonymity. This hands-on course demonstrates the different ways of covering your online digital trail and explores techniques that are used for following people who do not want to be tracked. CSA is a flexible course and can be tuned to your specific organization’s needs.</p>
+<p></p>
+                    </div>
+                  </div>
+                </li>
+                
+                <li id="circle-item-4" class="circle-items-list">
+                  <img src="../images/research-icon-1.png" alt="image" class="circle-animated-image">
+                  <img src="../images/circle-5-bg.png" alt="image" class="hover-bg-images">
+                  <div class="circle-hover">
+                    <h6 class="focus-hover-text"><p>Research and</p>
+<p>Development</p>
+</h6>
+                    <div class="circle-details">
+                      <p></p><p>AELIUS is a trusted partner for conducting Research and Development for our clients. Ranging from big data down to the smallest low power processors, or the latest in application of advanced manufacturing, AELIUS specializes in bringing cutting edge computer science and engineering R&amp;D concepts through prototypes to practical applications.</p>
+<p>For new external capabilities, AELIUS brings years of unique experience in finding, evaluating and onboarding new technologies into existing enterprises. When a startup or lab concept is not able to bridge the contracting, legal, or manufacturing gap into integration with larger efforts, AELIUS can step in as a guide and protector of the nascent efforts until they reach fruition.</p>
+<p></p>
+                    </div>
+                  </div>
+                </li>
+                
+                <li id="circle-item-5" class="circle-items-list">
+                  <img src="../images/engineering-end.png" alt="image" class="circle-animated-image">
+                  <img src="../images/circle-6-bg.png" alt="image" class="hover-bg-images">
+                  <div class="circle-hover">
+                    <h6 class="focus-hover-text"><p>Engineering Development</p>
+<p>and Design</p>
+</h6>
+                    <div class="circle-details">
+                      <p></p><p>The AELIUS team of diverse engineers and industrial designers start with the end-use customer in mind. We research the problem and work with the end user to create a problem statement. The problem statement guides the project’s timeline to manage expectations for a successful implementation of the solution.</p>
+<p>Talking to the end user, the team creates custom solutions utilizing digital sketches and descriptions of potential design aspects. AELIUS then uses a diverse collection of CAD packages to build models for use in FEA and other analytic approaches. Finally all of this is combined in a hands-on or VR model so the end user can examine the use and give feedback to improve the next iteration.</p>
+<p></p>
+                    </div>
+                  </div>
+                </li>
+                
+                <li id="circle-item-6" class="circle-items-list">
+                  <img src="../images/innovative-icon.png" alt="image" class="circle-animated-image">
+                  <img src="../images/circle-7-bg.png" alt="image" class="hover-bg-images">
+                  <div class="circle-hover">
+                    <h6 class="focus-hover-text">Innovative Solutions</h6>
+                    <div class="circle-details">
+                      <p></p><p>AELIUS’s team of experts approaches problem solving from far outside normal use practices. Our solutions focus on what is available and what the customer’s challenges are.</p>
+<p>Our team pushes the industry boundaries by identifying unique ways to use novel, existing, or even previously thought of as out-dated technologies to get the job done in the most efficient manner. The AELIUS team has implemented IoT sensors with technology as diverse as LiDAR and Raspi based Cameras. By combining these together, projects like unmanned ground vehicles (UGVs) can determine the safest routes for underground workers.</p>
+<p></p>
+                    </div>
+                  </div>
+                </li>
+                
+                <li id="circle-item-7" class="circle-items-list">
+                  <img src="../images/computer-science.png" alt="image" class="circle-animated-image">
+                  <img src="../images/circle-8-bg.png" alt="image" class="hover-bg-images">
+                  <div class="circle-hover">
+                    <h6 class="focus-hover-text"><p>Computer Science</p>
+<p>and Data Analysis</p>
+</h6>
+                    <div class="circle-details">
+                      <p></p><p>AELIUS’s team of expert computer scientists solves problems ranging from secure network design and implementation to the creation and deployment of spatially-aware, small form-factor, remotely-piloted vehicles. We take on the most challenging problems and help craft elegant and meaningful solutions.</p>
+<p>Our data science professionals employ leading-edge techniques to transform and manipulate data, often billions of records per day, for a better understanding of its implications and to create actionable knowledge.</p>
+<p></p>
+                    </div>
+                  </div>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+         
+    </div>
+  
+
+
+
+<script src="../../cdn.jsdelivr.net/npm/js-cookie%403.0.1/dist/js.cookie.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const circleItems = document.querySelectorAll(".circle-items-list");
+    const h6Elements = document.querySelectorAll(".circle-hover h6");
+    const circleMiddle = document.querySelector(".focus-inner");
+    const middleOverlay = circleMiddle.querySelector(".middle-overlay");
+    const bigcircleMiddle = document.querySelector(".around-circle-group-section");
+    const bigmiddleOverlay = bigcircleMiddle.querySelector(".middle-overlay");
+    
+    h6Elements.forEach(function (h6Element) {
+      h6Element.addEventListener("mouseenter", function () {
+        const allHovered = Array.from(h6Elements).every((element) =>
+          element.classList.contains("circle-title-hover")
+        );
+
+        if (allHovered) {
+          middleOverlay.textContent = "&"; 
+          bigmiddleOverlay.textContent = "&"; 
+          Cookies.set("allCirclesHovered", true, { expires: 1 }); 
+        }
+      });
+    });
+
+    
+    if (Cookies.get("allCirclesHovered")) {
+      middleOverlay.textContent = "&";
+      bigmiddleOverlay.textContent = "&"; 
+    }
+
+    circleItems.forEach(function (circleItem, index) {
+      let hoverTimeout;
+
+      circleItem.addEventListener("mouseenter", function () {
+        if (!circleItem.classList.contains("focus-active")) {
+          circleItem.classList.add("focus-active");
+          hoverTimeout = setTimeout(function () {
+            circleItem.classList.remove("focus-active");
+          }, 5000);
+        }
+      });
+
+      circleItem.addEventListener("mouseleave", function () {
+        clearTimeout(hoverTimeout);
+        hoverTimeout = setTimeout(function () {
+          circleItem.classList.remove("focus-active");
+          circleItem.classList.add("has-visited");
+        }, 5000);
+      });
+
+      const h6Element = circleItem.querySelector(".circle-hover h6");
+      const cookieName = "circleHovered_" + index;
+
+      circleItem.addEventListener("mouseenter", function () {
+        if (!Cookies.get(cookieName)) {
+          h6Element.classList.add("circle-title-hover"); 
+          Cookies.set(cookieName, true, { expires: 1 }); 
+        }
+      });
+
+      
+      const cookieValue = Cookies.get(cookieName);
+      if (cookieValue) {
+        h6Element.classList.add("circle-title-hover");
+      }
+    });
+  });
+</script>
+ 
+  
+       
+
+    <div class="collaborators-section">
+      <div class="container">
+        <div class="collaborators-inner">
+          <div class="collaborators-left">
+            <h1 class="section-title">Collaborators</h1>
+            <p class="collaborators-detail">
+
+We’re partnered with some of the best innovative companies and consultants across the industry to deliver the latest, most advanced technologies. With these highly respected and agile service providers, AELIUS works to support the nation’s security and our forces worldwide.</p>
+
+            <ul class="collaborators-logo">
+              
+
+              <li>
+                <a href="../../hackerfactor.com/index.html" target="_blank">
+                  <img src="../images/terms-logos-1.png" alt="hacker factor">
+                </a>
+              </li>
+
+              
+
+              <li>
+                <a href="//hackrodstudiomfg.com" target="_blank">
+                  <img src="../images/terms-logos-2.png" alt="hackrod">
+                </a>
+              </li>
+
+              
+
+              <li>
+                <a href="../../www.ncms.org/index.html" target="_blank">
+                  <img src="../images/terms-logos-3.png" alt="cms">
+                </a>
+              </li>
+
+              
+            </ul>
+          </div>
+          <div class="collaborators-right">
+            <img src="../images/longtime-img.jpeg" alt="main image">
+          </div>
+        </div>
+      </div>
+    </div>
+
+     
+  
+
+ 
+  
+        
+  
+
+ 
+  
+        
+  
+
+
+
+<script>
+  const popupToggle = document.querySelectorAll(".popupTrigger");
+const serviceSections = document.querySelectorAll(".connect-bg");
+const popupOverlay = document.querySelector(".popup-overlay");
+const connect_bg = document.getElementById("container");
+const popupOverlays = document.getElementById("home-body");
+const spinner = document.getElementById("spinner");
+
+function openPopup() {
+  popupOverlays.classList.add("open-thankyou-popup");
+  popupOverlay.style.display = "flex";
+  popupOverlay.classList.remove("hide");
+}
+
+function clearFormFields() {
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("comments");
+
+  
+  nameInput.value = "";
+  emailInput.value = "";
+  messageInput.value = "";
+
+  
+  const nameErrorDiv = document.getElementById("name-error");
+  const emailErrorDiv = document.getElementById("email-error");
+  const messageErrorDiv = document.getElementById("message-error");
+  
+  nameErrorDiv.style.display = "none";
+  emailErrorDiv.style.display = "none";
+  messageErrorDiv.style.display = "none";
+
+  
+  nameInput.classList.remove("active-border");
+  emailInput.classList.remove("active-border");
+  connect_bg.classList.remove("image-error");
+}
+
+popupToggle.forEach((toggle, index) => {
+  toggle.addEventListener("click", function (event) {
+    event.stopPropagation();
+  });
+});
+
+function closePopup() {
+  popupOverlays.classList.remove("open-thankyou-popup");
+  
+  popupOverlay.classList.add("hide");
+  serviceSections.forEach((serviceSection) => {
+    serviceSection.classList.remove("body");
+  });
+}
+
+popupOverlays.addEventListener("click", function (event) {
+  if (!event.target.closest(".popup")) {
+    closePopup();
+  }
+});
+popupOverlays.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closePopup();
+  }
+});
+
+
+const popupCloseBtns = document.querySelectorAll(".popup-close-btn");
+popupCloseBtns.forEach((closeBtn) => {
+  closeBtn.addEventListener("click", closePopup);
+});
+
+const submitButton = document.getElementById("submit-button");
+function validateEmail(email) {
+  
+  const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+
+  return emailRegex.test(email);
+}
+function openPopupOnSuccess(event) {
+  event.preventDefault(); 
+  const isValid = validateForm();
+
+  if (isValid) {
+    openPopup();
+    clearFormFields();
+    return true; 
+  } else {
+    return false; 
+  }
+}
+
+function validateForm() {
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const nameErrorDiv = document.getElementById("name-error");
+  const emailErrorDiv = document.getElementById("email-error");
+  const wrongEmail = document.getElementById("wrong-email");
+  const messageErrorDiv = document.getElementById("message-error");
+
+  let isValid = true;
+
+  if (nameInput.value === "") {
+    nameErrorDiv.style.display = "block";
+    messageErrorDiv.style.display = "block";
+    isValid = false;
+  } else {
+    nameErrorDiv.style.display = "none";
+  }
+  if (emailInput.value === "") {
+    emailErrorDiv.style.display = "block";
+    wrongEmail.style.display = "none";
+    messageErrorDiv.style.display = "block";
+    isValid = false;
+  } else {
+    emailErrorDiv.style.display = "none";
+    if (!validateEmail(emailInput.value)) {
+      wrongEmail.style.display = "block";
+      emailInput.classList.add("active-border");
+      messageErrorDiv.style.display = "block";
+      isValid = false;
+    } else {
+      wrongEmail.style.display = "none";
+      emailInput.classList.remove("active-border");
+    }
+  }
+
+
+  if (nameInput.value === "") {
+    nameInput.classList.add("active-border");
+    connect_bg.classList.add("image-error");
+  } else {
+    nameInput.classList.remove("active-border");
+    connect_bg.classList.remove("image-error");
+  }
+
+  if (emailInput.value === "") {
+    emailInput.classList.add("active-border");
+    connect_bg.classList.add("image-error");
+  } else {
+    emailInput.classList.remove("image-error");
+  }
+
+  return isValid;
+}
+
+document.getElementById("mG61Hd").addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  spinner.classList.add("spinner");
+  const isValid = validateForm();
+
+  if (isValid) {
+    const googleFormEndpoint = "https://docs.google.com/forms/d/e/1FAIpQLSd7hzCChSpt_pemC9VMe4EQrYmRnNTbB5AkLVUYdQiFmyEXJA/formResponse";
+    let request = new XMLHttpRequest();
+    request.open('POST', googleFormEndpoint, true);
+
+    request.onload = function () {
+      
+      if (request.status === 200) {
+        
+        openPopup();
+        clearFormFields();
+      }
+    };
+
+    request.onerror = function (e) {
+      
+      openPopup();
+      clearFormFields();
+      spinner.classList.remove("spinner");
+      document.getElementById("send-msg").blur();
+    };
+    request.send(new FormData(event.target));
+  }
+  setTimeout(() => {
+    spinner.classList.remove("spinner");
+    document.getElementById("send-msg").blur();
+  }, 1000);
+  }
+  
+  
+
+</script>  
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+  
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-left">
+            <div class="logo-wrapper">
+              <a href="../index.html">
+                <img src="../images/footer_logo.png" alt="footer logo">
+              </a>
+            </div>
+            <div class="footer-copyright">
+              <p>Copyright © 2026 AELIUS Exploitation Technologies. All Rights Reserved</p>
+            </div>
+          </div>
+          <div class="footer-right">
+            <nav class="site-navbar">
+              <ul>
+                
+                <li class="list-item" id="nav-main-0">
+                  <a href="index.html">Focus and Specialties</a>
+                </li>
+                
+                <li class="list-item" id="nav-main-1">
+                  <a href="../join-our-team/index.html">Join Our Team</a>
+                </li>
+                
+                <li class="list-item" id="nav-main-2">
+                  <a href="../connect/index.html">Connect</a>
+                </li>
+                
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-copyright-responsive">
+            <p>Copyright © 2026 AELIUS Exploitation Technologies. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const listItems = document.querySelectorAll(".list-item");
+    
+    function getCurrentURL() {
+      const currentURL = window.location.pathname;
+      return currentURL.endsWith("/") ? currentURL.slice(0, -1) : currentURL;
+    }
+    
+    function isLinkActive(link, currentURL) {
+      const linkURL = link.getAttribute("href");
+      return currentURL === linkURL;
+    }
+    
+    function setActiveImage() {
+      const currentURL = getCurrentURL();
+      listItems.forEach((item) => {
+        const link = item.querySelector("a");
+        const isActive = isLinkActive(link, currentURL);
+        if (isActive) {
+          link.classList.add("active-footer-nav");
+        } else {
+          link.classList.remove("active-footer-nav");
+        }
+      });
+    }
+    
+    setActiveImage();
+  });
+</script>
+
+    <script type="text/javascript" src="../js/carousel.js/index.html"></script>
+    <link rel="stylesheet" href="../css/carousel.css/index.html">
+    
+<link rel="stylesheet" href="../slick/slick.scss">
+<link rel="stylesheet" href="../slick/slick-theme.scss">
+
+<script src="../slick/slick.min.js"></script>
+  
+</body></html>
